@@ -1,5 +1,21 @@
 @import './part1.css';
 @import './part2.css';
+@font-face {
+	font-family: "Cardo-Regular";
+	src: url("/assets/fonts/cardo/Cardo-Regular.ttf");
+};
+@font-face {
+	font-family: "Cardo-Bold";
+	src: url("/assets/fonts/cardo/Cardo-Bold.ttf");
+}
+@font-face {
+	font-family: "Inter-Regular";
+	src: url("/assets/fonts/inter/Inter-Regular.otf");
+}
+@font-face {
+	font-family: "Inter-Bold";
+	src: url("/assets/fonts/inter/Inter-Bold.otf");
+}
 
 
 /* 
@@ -61,6 +77,7 @@ body {
 	width: 100vw;
 	height: 100vh;
 	overflow: hidden;
+	line-height: 1.5rem;
 }
 
 button:hover, a:hover{
