@@ -1,0 +1,103 @@
+@import './part1.css';
+@import './part2.css';
+
+
+/* 
+    reto ny variable css:
+    - horiz-padding: variable mitazona ny padding left sy right. tsy votery padding ihany no ampesaina azy fa afaka atao am margin ko raha margin no ilaina fa tsy padding
+    - vert-padding: otranle teo ihany fa top sy bottom
+
+    Reo variable roa reo de miova isaky ny breakpoint (media query) arakaraky ny habehan ecran.
+    Any ambany zao ela mahita code otranzao ohatra manova ny valeur anreo variables reo:
+
+    @media only screen and (max-width: 1500px) {
+	:root{
+		--horiz-padding : 10%;
+		--vert-padding : 2rem;
+	}
+
+    Ny fampiasana variable css de otranzao ohatra:
+        padding: var(--vert-padding) var(--horiz-padding);
+        color: var(--yellow);
+
+    initialement netsika 1980px ny grand écran raisitsika voalohany de midina tsikelikely atrany am mobil atram 320px any mba tkn pris en compte
+
+    RAHA SANATRIA MISY COULEUR ADINOKO NANAO ANAZY TANATY VARIABLE, OHATRA HOE COULEUR ANA SHADOW NA TSY AIKO
+    DE MBA CREEO VARIABLE OTRANREO AMZAY MBA UNIFORME DAHOLY NY COULEUR APESAITSIKA
+}
+*/
+:root {
+	--horiz-padding : 15%;
+	--vert-padding : 2.5rem;
+
+    --dark-blue: #1B3764;
+    --yellow: #FFCA42;
+    --white: #F6F8FC;
+
+	font-size: 19px;
+}
+
+/* reto ndray mi reset ny style par defaut an browser satria ny style par defaut par browser misy tsy mitovy */
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+html,
+body {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+button:hover, a:hover{
+	cursor: pointer;
+}
+
+/* #loader{
+  z-index: 16;
+} */
+
+#main-content {
+	z-index: 15;
+
+	width: 100%;
+	height: 100vh;
+	overflow-y: auto;
+	overflow-x: hidden;
+
+	scroll-behavior: smooth;
+
+	position: relative;
+}
+
+@media only screen and (max-width: 1500px) {
+	:root{
+		--horiz-padding : 10%;
+		font-size: 14px;
+		--vert-padding : 2rem;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+    :root{
+        --horiz-padding: 4%;
+    }
+}
+
+@media only screen and (max-width: 680px){
+	:root{
+        --horiz-padding: 25px;
+    }
+}
