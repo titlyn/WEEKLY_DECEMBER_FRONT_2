@@ -79,14 +79,20 @@
 #learn .right_container {
     flex: 1;
     padding: var(--vert-padding);
-    background-color: var(--yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
-
+#learn .right_container .frame {
+    border: 0.5rem solid var(--yellow);
+    width: 70%;
+    height: 80%;
+}
 
 #learn .right_container img{
-    width: 80%;
+    transform: translate(-20px,-20px);
+    width: 100%;
 }
 
 
@@ -190,4 +196,276 @@
     margin-right: 0.5rem;
     color: var(--dark-blue);
     border-bottom: 1px solid var(--dark-blue);
+}
+
+#about_book {
+    padding: var(--horiz-padding);
+    margin: var(--vert-padding);
+    display: flex;
+    justify-content: center;
+}
+
+#about_book p{
+    font-family: 'Inter-Regular';
+    color: var(--gray);
+}
+
+#about_book .boite_unique{
+    color: var(--dark-blue);
+    font-family: "Cardo-Regular";
+    display: inline-block;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.boite_unique::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0%;
+        width: 7%;
+        border-bottom: 2px solid var(--yellow);
+}
+
+#about_book .book_left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+}
+
+#about_book .book_description {
+    margin-top: var(--vert-padding);
+}
+
+#about_book .rating .element {
+    display: flex;
+    margin-top: var(--vert-padding);
+    color: var(--dark-blue);
+    font-weight: bold;
+}
+
+#about_book .rating .element .round {
+    background: var(--yellow);
+    width: 16px;
+    height: 16px;
+    margin: 2px;
+    border-radius: 100%;
+
+}
+
+#about_book .rating .element .mid_round {
+    border: 1px solid var(--yellow);
+    background: conic-gradient(
+        from 180deg,
+        var(--yellow) 0%,
+        var(--yellow) 50%,
+        #ffffff 50%,
+        #ffffff 100%
+      );
+    width: 16px;
+    height: 16px;
+    margin: 2px 0.5rem 2px 2px;
+    border-radius: 100%;
+}
+
+#about_book .rating .rating_text {
+    margin-top: 0.5rem;
+    font-family: 'Inter-Regular';
+    color: var(--dark-blue);
+}
+
+#about_book .book_right {
+    display: flex;
+    flex: 2;
+}
+
+#about_book .book_right .left_book_right {
+    padding: 2rem;
+}
+
+#about_book .book_right .left_book_right .card_book {
+    background: var(--dark-blue);
+    padding: var(--vert-padding);
+    margin: 1rem 0 2rem 1rem;
+}
+
+
+#about_book .book_right .left_book_right .card_book .head_card{
+    display: flex;
+    align-items: center;
+}
+
+.profile_rating {
+    display: flex;
+    align-items: center;
+}
+
+.profile_rating .round{
+    width: 16px;
+    height: 16px;
+    background: var(--yellow);
+    margin: 2px;
+    border-radius: 50%;
+}
+
+.profile_rating .mid_round {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid var(--yellow);
+    background: conic-gradient(
+        from 180deg,
+        var(--yellow) 0%,
+        var(--yellow) 50%,
+        var(--dark-blue) 50%,
+        var(--dark-blue) 100%
+    );
+    margin: 0 0 0 2px;
+}
+
+#about_book .book_right .left_book_right .card_book .head_card .profile img{
+    width: 5rem;
+    height: 5rem;
+    background-size: cover;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+#about_book .book_right .right_book_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about_book .book_right .right_book_right .card_book {
+    background: var(--dark-blue);
+    padding: var(--vert-padding);
+    margin: 1rem 1rem 1rem 0;
+}
+
+#about_book .book_right .right_book_right .card_book .head_card{
+    display: flex;
+    align-items: center;
+}
+
+#about_book .book_right .right_book_right .card_book .head_card .profile img{
+    width: 5rem;
+    height: 5rem;
+    background-size: cover;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+#article {
+    text-align: center;
+    background: var(--blue-gray);
+    padding: var(--vert-padding);
+}
+
+#article p{
+    font-family: 'Inter-Regular';
+}
+
+#article .article_cards {
+    display: flex;
+    margin-top: var(--vert-padding);
+    justify-content: center;
+    padding: var(--vert-padding) var(--horiz-padding) var(--vert-padding) var(--horiz-padding);
+}
+
+#article .article_cards .article_card {
+    margin: 1rem;
+    width: 100%;
+    background-color: var(--white);
+}
+
+#article .article_cards .article_card img {
+    width: 100%;
+}
+
+#article .article_cards .article_card .desc {
+    padding: 1rem;
+    text-align: left;
+}
+
+#article .article_cards .article_card .desc h3 {
+    font-family: 'Cardo-Regular';
+    color: var(--dark-blue);
+}
+
+#article .article_cards .article_card .desc p {
+    font-family: 'Inter-Regular';
+    color: var(--gray);
+    margin-top: 1rem;
+}
+
+#article .article_cards .article_card .desc .c_f {
+    display: flex;
+    justify-content: space-between;
+}
+
+#article .article_cards .article_card .desc .c_f a{
+    color: var(--dark-blue);
+    border-bottom: 1px solid var(--dark-blue);
+    font-family: 'Cardo-Regular';
+    font-weight: bold;
+}
+
+#article .article_cards .article_card .desc .c_f .r_f {
+    font-family: 'Inter-Regular';
+    color: var(--dark-blue);
+}
+
+#subscription {
+    padding:var(--horiz-padding);
+    text-align: center;
+}
+
+#subscription .subscription_box {
+    background: var(--yellow);
+    padding:var(--horiz-padding);
+}
+
+#subscription .subscription_box .boite {
+    color: var(--dark-blue);
+}
+
+#subscription .subscription_box .boite::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15%;
+    border-bottom: 2px solid var(--dark-blue); 
+}
+
+#subscription .subscription_box p{
+    font-family: 'Inter-Regular';
+    margin-top: 1.5rem;
+    color: var(--dark-blue);
+}
+
+.sub_foot {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.sub_foot input {
+    height: 3rem;
+    width: 50%;
+    border: none;
+    padding: 1rem;
+}
+
+.sub_button {
+    border: none;
+    margin-left: 1rem;
+    width: 20%;
+    font-family: 'Cardo-Regular';
+    font-weight: bold;
+    background: var(--dark-blue);
+    color: var(--white);
 }
