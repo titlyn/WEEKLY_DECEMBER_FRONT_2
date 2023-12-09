@@ -17,31 +17,6 @@
 	src: url("/assets/fonts/inter/Inter-Bold.otf");
 }
 
-
-/* 
-    reto ny variable css:
-    - horiz-padding: variable mitazona ny padding left sy right. tsy votery padding ihany no ampesaina azy fa afaka atao am margin ko raha margin no ilaina fa tsy padding
-    - vert-padding: otranle teo ihany fa top sy bottom
-
-    Reo variable roa reo de miova isaky ny breakpoint (media query) arakaraky ny habehan ecran.
-    Any ambany zao ela mahita code otranzao ohatra manova ny valeur anreo variables reo:
-
-    @media only screen and (max-width: 1500px) {
-	:root{
-		--horiz-padding : 10%;
-		--vert-padding : 2rem;
-	}
-
-    Ny fampiasana variable css de otranzao ohatra:
-        padding: var(--vert-padding) var(--horiz-padding);
-        color: var(--yellow);
-
-    initialement netsika 1980px ny grand écran raisitsika voalohany de midina tsikelikely atrany am mobil atram 320px any mba tkn pris en compte
-
-    RAHA SANATRIA MISY COULEUR ADINOKO NANAO ANAZY TANATY VARIABLE, OHATRA HOE COULEUR ANA SHADOW NA TSY AIKO
-    DE MBA CREEO VARIABLE OTRANREO AMZAY MBA UNIFORME DAHOLY NY COULEUR APESAITSIKA
-}
-*/
 :root {
 	--horiz-padding: 15%;
 	--vert-padding: 4rem;
@@ -49,6 +24,7 @@
 	--dark-blue: #1B3764;
 	--yellow: #FFCA42;
 	--gray: #969AA0;
+	--light-grey: #B4C7E7;
 	--blue-gray: #F4F8FF;
 	--white: #FFF;
 
@@ -86,6 +62,8 @@ a:hover {
 }
 
 button.regular-btn {
+	background-color: transparent;
+	font-family: "Cardo-Regular";
     display: flex;
     padding: 1rem 3rem 1.05rem 3rem;
     justify-content: center;
@@ -93,7 +71,7 @@ button.regular-btn {
     gap: 0.625rem;
 
 	font-weight: 700;
-	font-size: 1.08rem;
+	font-size: 1rem;
 	letter-spacing: 0.02375rem;
 }
 

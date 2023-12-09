@@ -6,7 +6,13 @@ nav,
 #main-menu,
 #main-menu a,
 nav #social-media-links,
-nav #social-media-links a {
+nav #social-media-links a,
+#author-books,
+#books-content,
+.book-presentation,
+#book-presentation .img-container,
+.book-details .descri,
+.book-details .details {
     display: flex;
     align-items: center;
 }
@@ -147,7 +153,7 @@ nav #cart-btn #cart-content-number {
 
     color: var(--white);
 
-    
+
     background-color: var(--dark-blue);
     padding: var(--vert-padding) var(--horiz-padding) var(--vert-padding);
 }
@@ -242,13 +248,13 @@ nav #cart-btn #cart-content-number {
     letter-spacing: 0.02375rem;
 }
 
-#banner-details #details {
+#banner-details .details {
     display: flex;
     gap: 4.5rem;
     align-items: center;
 }
 
-#banner-details #details p {
+.details p {
     display: flex;
     flex-direction: column;
     gap: .19rem;
@@ -262,7 +268,7 @@ nav #cart-btn #cart-content-number {
     position: relative;
 }
 
-#banner-details #details p::before {
+.details p::before {
     content: "";
     position: absolute;
     top: .38rem;
@@ -277,14 +283,107 @@ nav #cart-btn #cart-content-number {
     -o-border-radius: 50%;
 }
 
-#banner-details #details .nbr {
-    color: var(--blue-gray);
+.details .nbr {
+    color: var(--light-gray);
     font-family: Inter;
     font-size: 1rem;
     font-weight: 400;
     line-height: 170%;
     /* 1.9125rem */
     letter-spacing: 0.01rem;
+}
+
+/* -----AUTHOR BOOKS----- */
+.title {
+    position: relative;
+    color: var(--dark-blue);
+    font-family: "Cardo-Regular";
+}
+
+.title::before {
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3.4rem;
+    border-bottom: 0.15rem solid var(--yellow);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+#author-books {
+    flex-direction: column;
+    justify-content: center;
+    gap: 3.4rem;
+
+    padding: calc(var(--vert-padding)*3) var(--horiz-padding);
+}
+
+#books-content {
+    gap: 4rem;
+}
+
+.book-presentation {
+    gap: 2.2rem;
+    justify-content: space-between;
+}
+
+.book-presentation .img-container {
+    width: 54%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.book-presentation .img-container img {
+    width: 100%;
+    height: auto;
+}
+
+.book-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;;
+
+    gap: 1.6rem;
+    width: 46%;
+}
+
+.book-details .descri {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 0.6rem;
+}
+
+.book-details .descri h4 {
+    color: var(--dark-blue);
+
+    font-family: "Cardo-Regular";
+}
+
+.book-details .descri p {
+    color: var(--gray);
+    font-family: "Inter-Regular";
+    font-weight: 400;
+    line-height: 160%;
+    /* 2.1375rem */
+    letter-spacing: -0.01rem;
+}
+
+.book-details .details {
+    flex-direction: row;
+    width: 90%;
+    gap: 2.4rem;
+}
+
+.book-details .regular-btn.secondary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--yellow);
 }
 
 @media only screen and (max-width: 1600px) {
@@ -444,6 +543,36 @@ nav #cart-btn #cart-content-number {
     #welcome-msg .horiz-line {
         width: 4.5rem;
     }
+
+    #author-books {
+        flex-direction: column;
+        justify-content: center;
+        gap: 3.4rem;
+    
+        padding: var(--vert-padding) var(--horiz-padding);
+    }
+
+    #books-content{
+        flex-direction: column;
+        width: 90%;
+        max-width: 755px;
+        gap: 3rem;
+    }
+    
+    .book-presentation{
+        max-width: 580px;
+    }
+
+    .book-presentation .img-container{
+        width: 60%;
+    }
+
+    .book-presentation:nth-last-of-type(odd){
+        flex-direction: row-reverse;
+    }
+    .book-presentation:nth-last-of-type(odd) .img-container {
+        justify-content: flex-end;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -472,6 +601,7 @@ nav #cart-btn #cart-content-number {
         min-height: calc(100vh - 4*var(--vert-padding));
         justify-content: center;
     }
+
     #banner-img {
         /* order: 1; */
         /* max-width: 225px; */
@@ -482,34 +612,70 @@ nav #cart-btn #cart-content-number {
         height: auto;
     }
 
-    #banner-details #details{
+    #banner-details .details {
         margin: 4rem auto 0 auto;
     }
 
-    .details-container .content p{
+    .details-container .content p {
         width: 100%;
+    }
+
+    .book-details {
+        gap: 1.2rem;
     }
 }
 
-@media only screen and (max-width: 680px){
-    #landing{
-        gap: 4rem;
+@media only screen and (max-width: 680px) {
+    #landing {
+        gap: 2rem;
     }
 
-    #details-btns{
+    #details-btns {
         flex-direction: column;
         width: 100%;
     }
-    
-    #details-btns > *{
+
+    #details-btns>* {
         width: 100%;
         text-align: center;
     }
 
 }
 
-@media only screen and (max-width: 450px){
-    #banner-details #details{
+@media only screen and (max-width: 525px){
+    #books-content {
+        gap: 4.5rem;
+    }
+
+    .book-presentation {
+        flex-direction: column !important;
+        gap: 1rem;
+    }
+
+    .book-presentation .img-container{
+        width: 100%;
+        max-width: 210px;
+    }
+
+    .book-details, .book-details h4 {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .book-details .details{
+        width: max-content;
+        margin: auto;
+        justify-content: space-between;
+    }
+
+    .book-details .regular-btn.secondary{
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #banner-details .details {
         flex-direction: column;
         align-items: flex-start;
         margin: 6rem 0;
@@ -518,12 +684,12 @@ nav #cart-btn #cart-content-number {
         gap: 2rem;
     }
 
-    #banner-details #details p{
+    #banner-details .details p {
         flex-direction: row;
         width: 100%;
     }
 
-    #banner-details #details .nbr{
+    #banner-details .details .nbr {
         margin: auto;
     }
 }
