@@ -147,6 +147,7 @@ nav #cart-btn #cart-content-number {
 
     color: var(--white);
 
+    
     background-color: var(--dark-blue);
     padding: var(--vert-padding) var(--horiz-padding) var(--vert-padding);
 }
@@ -157,11 +158,8 @@ nav #cart-btn #cart-content-number {
 }
 
 #banner-details {
+    /* border: 2px solid red; */
     width: 56%;
-}
-
-a:active {
-    background-color: red;
 }
 
 #banner-img {
@@ -380,7 +378,7 @@ a:active {
         width: 100%;
         height: 100vh;
         gap: 3rem;
-        padding: var(--vert-padding) var(--horiz-padding) calc(var(--vert-padding) * 1.2);
+        padding: var(--vert-padding) var(--horiz-padding) calc(var(--vert-padding) * 1.6);
         background-color: var(--dark-blue);
         opacity: 0;
     }
@@ -471,7 +469,7 @@ a:active {
 
     #banner-details {
         /* order: 2; */
-        min-height: calc(100vh - var(--vert-padding));
+        min-height: calc(100vh - 4*var(--vert-padding));
         justify-content: center;
     }
     #banner-img {
@@ -494,6 +492,10 @@ a:active {
 }
 
 @media only screen and (max-width: 680px){
+    #landing{
+        gap: 4rem;
+    }
+
     #details-btns{
         flex-direction: column;
         width: 100%;
