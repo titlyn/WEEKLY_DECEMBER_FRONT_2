@@ -14,17 +14,18 @@
                 <img src="/assets/img/logo/pages.svg" alt="Pages logo">
                 <span> Pages</span>
             </a>
+
             <nav>
                 <div id="spacer"></div>
-                
+
                 <div id="social-media-links">
-                    <a href="www.facebook.com" target="_blank">
+                    <a href="www.facebook.com" target="_blank" href="#" style="--i: 6;">
                         <img src="/assets/img/logo/facebook.svg" alt="Facebook logo">
                     </a>
-                    <a href="www.twitter.com" target="_blank">
+                    <a href="www.twitter.com" target="_blank" href="#" style="--i: 7;">
                         <img src="/assets/img/logo/twitter.svg" alt="Twitter logo">
                     </a>
-                    <a href="www.linkedin.com" target="_blank">
+                    <a href="www.linkedin.com" target="_blank" href="#" style="--i: 8;">
                         <img src="/assets/img/logo/linkedin.svg" alt="Linkedin logo">
                     </a>
                 </div>
@@ -32,27 +33,37 @@
                 <div id="nav-content">
                     <div id="menu">
                         <div id="main-menu">
-                            <a href="/index.html">Home</a>
-                            <a href="#">
-                                Pages
+                            <a href="/index.html"style="--i: 0;">Home</a>
+                            <a href="#" style="--i: 1;">
+                                <span>Pages</span>
                                 <img src="/assets/img/svg/expand_arrow.svg" alt="expand arrow">
                             </a>
-                            <a href="#">About</a>
-                            <a href="#">Services</a>
-                            <a href="#">Contact</a>
+                            <a href="#" style="--i: 2;">About</a>
+                            <a href="#" style="--i: 3;">Services</a>
+                            <a href="#" style="--i: 4;">Contact</a>
                         </div>
         
-                        <button name="Cart" id="cart-btn">
+                        <button name="Cart" id="cart-btn" href="#">
                             <img src="/assets/img/svg/cart.svg" alt="Cart">
                             <span id="cart-content-number">01</span>
                         </button>
                     </div>
 
-                    <button id="nav-order" name="Order today">
+                    <button id="nav-order" name="Order today" style="--i: 5;">
                         Order Today
                     </button>
                 </div>
             </nav>
+
+            <button id="menu-toggler">
+                <svg id="menu-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="512" height="512">
+                    <path d="M4 7L4 9L28 9L28 7 Z M 4 15L4 17L28 17L28 15 Z M 4 23L4 25L28 25L28 23Z" />
+                </svg>
+                <svg id="quit-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="500" height="500">
+                    <path
+                        d="M9.15625 6.3125L6.3125 9.15625L22.15625 25L6.21875 40.96875L9.03125 43.78125L25 27.84375L40.9375 43.78125L43.78125 40.9375L27.84375 25L43.6875 9.15625L40.84375 6.3125L25 22.15625Z" />
+                </svg>
+            </button>
         </header>
         
         <div id="learn" class="learn_about">
@@ -652,5 +663,7 @@
             </div>
         </footer>ad (header desk done)
     </div>
+
+    <script type="module" src="/src/script/main.js"></script>
 </body>
 </html>

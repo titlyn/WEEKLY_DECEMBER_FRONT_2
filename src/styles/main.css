@@ -85,7 +85,7 @@ button:hover, a:hover{
 }
 
 /* #loader{
-  z-index: 16;
+  z-index: 18;
 } */
 
 #main-content {
@@ -99,6 +99,8 @@ button:hover, a:hover{
 	scroll-behavior: smooth;
 
 	position: relative;
+
+	background-color: #FFF;
 }
 
 @media only screen and (max-width: 1600px) {
@@ -125,6 +127,7 @@ button:hover, a:hover{
 @media only screen and (max-width: 992px) {
 	:root{
         --horiz-padding: 4%;
+		font-size: 12px;
     }
 }
 
