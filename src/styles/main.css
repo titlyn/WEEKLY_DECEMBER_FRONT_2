@@ -44,7 +44,7 @@
 */
 :root {
 	--horiz-padding : 15%;
-	--vert-padding : 2.5rem;
+	--vert-padding : 2rem;
 
     --dark-blue: #1B3764;
     --yellow: #FFCA42;
@@ -101,16 +101,29 @@ button:hover, a:hover{
 	position: relative;
 }
 
+@media only screen and (max-width: 1600px) {
+	:root{
+		--horiz-padding : 9.5%;
+		--vert-padding : 2rem;
+		font-size: 16px;
+	}
+}
+
 @media only screen and (max-width: 1500px) {
 	:root{
-		--horiz-padding : 10%;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	:root{
 		font-size: 14px;
+		--horiz-padding : 8%;
 		--vert-padding : 2rem;
 	}
 }
 
 @media only screen and (max-width: 992px) {
-    :root{
+	:root{
         --horiz-padding: 4%;
     }
 }

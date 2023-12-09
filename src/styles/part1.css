@@ -1,0 +1,139 @@
+header, header #logo, nav, #nav-content, #menu, #main-menu, #main-menu a, nav #social-media-links, nav #social-media-links a{
+    display: flex;
+    align-items: center;
+}
+
+header{
+    background-color: var(--dark-blue);
+    color: white;
+
+    padding: 1.8rem var(--horiz-padding);
+
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+header #logo{
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    gap: 0.5rem;
+}
+
+header #logo img{
+    width: 1.4rem;
+    height: auto;
+}
+
+nav{
+    width: 100%;
+    justify-content: space-between;
+}
+
+nav #spacer{
+    display: none;
+}
+
+nav #social-media-links{
+    gap: 0.6rem;
+}
+
+nav #social-media-links a{
+    justify-content: center;
+
+    background-color: var(--white);
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+#nav-content{
+    gap: 1.8rem;
+}
+
+#menu{
+    gap: 1.2rem
+}
+
+#main-menu{
+    gap: 1.6rem;
+    font-weight: 500;
+}
+
+#main-menu a{
+    font-size: 1rem;
+    padding: 0 0.5rem;
+
+    gap : 0.4rem
+}
+
+nav #cart-btn{
+    border: none;
+    background-color: transparent;
+
+    width: 1.65rem;
+    height: max-content;
+
+    position: relative;
+}
+
+nav #cart-btn img{
+    width: 100%;
+    height: 100%;
+}
+
+nav #cart-btn #cart-content-number{
+    position: absolute;
+    right: -.8rem;
+    top: -.6rem;
+
+    aspect-ratio: 1/1;
+    
+    background-color: var(--yellow);
+    font-size: .7rem;
+    font-weight: 700;
+    padding: .3rem;
+
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+#nav-order{
+    display: flex;
+    padding: 0.82rem 1.6rem;
+    justify-content: center;
+    align-items: center;
+
+    border: .5px solid var(--yellow);
+    background-color: var(--yellow);
+    color: var(--dark-blue);
+
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.02rem;
+}
+
+@media only screen and (max-width: 992px) {
+    nav, #nav-content, #menu, #main-menu{
+        flex-direction: column;
+    }
+
+    nav{
+        position: absolute;
+            top: 0;
+            left: 0;
+
+        width: 100%;
+        height: 100vh;
+        padding: var(--vert-padding) var(--horiz-padding);
+
+        background-color: var(--dark-blue);
+    }
+
+    nav #spacer{
+        display: flex;
+        border: 2px solid red;
+    }
+}
