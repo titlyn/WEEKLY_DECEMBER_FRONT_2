@@ -1,0 +1,193 @@
+.contain_title {
+    color: var(--dark-blue);
+    font-family: "Cardo-Regular";
+}
+
+.boite {
+    display: inline-block;
+    position: relative;
+    padding: 1rem;
+}
+
+.boite::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15%;
+    border-bottom: 2px solid var(--yellow); 
+}
+
+#learn {
+    text-align: center;
+    font-family: 'Cardo-Regular';
+    padding: var(--vert-padding) var(--horiz-padding) var(--vert-padding) var(--horiz-padding);
+}
+
+#learn .learn_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--vert-padding);
+}
+
+#learn .left_container {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+}
+
+#learn .card {
+
+    background: var(--blue-gray);
+    margin: 1rem;
+    padding: var(--vert-padding);
+    width: 40%;
+    height: 40%;
+    text-align: left;
+    color: var(--dark-blue);
+}
+
+.card p {
+    margin-top: var(--horiz-padding);
+}
+
+.card .rounded {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 30%;
+    background: var(--yellow);
+    border-radius: 2rem;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+#learn .left_container .top_card {
+    display: flex;
+}
+
+#learn .left_container .bottom_card {
+    display: flex;
+}
+
+
+
+#learn .right_container {
+    flex: 1;
+    padding: var(--vert-padding);
+    background-color: var(--yellow);
+}
+
+
+
+
+#learn .right_container img{
+    width: 80%;
+}
+
+
+#chapter {
+    text-align: center;
+    background-color: var(--blue-gray);
+    margin-top: var(--vert-padding);
+    padding: var(--horiz-padding) var(--horiz-padding) var(--horiz-padding) var(--horiz-padding);
+}
+
+#chapter p {
+    font-family: 'Inter-Regular';
+    color: var(--gray);
+}
+
+#chapter .boite {
+    color: var(--dark-blue);
+    font-family: "Cardo-Regular";
+}
+
+#chapter .chapter_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: var(--vert-padding);
+}
+
+#chapter .chapter_container .top_chapter_card {
+    display: flex;
+}
+
+#chapter .chapter_container .bottom_chapter_card {
+    display: flex;
+}
+
+.chap_card {
+    margin: var(--vert-padding);
+    text-align: left;
+    background-color: var(--white);
+    padding: var(--vert-padding);
+}
+
+.title_card {
+    font-family: 'Cardo-Regular';
+    color: var(--dark-blue);
+}
+
+.chap_card .desc_card {
+    margin-top: 1rem;
+}
+
+.chap_card .foot {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.chap_card .foot .left_foot, .right_foot {
+    display: flex;
+    align-items: center;
+}
+
+.foot .round {
+    height: 10px;
+    width: 10px;
+    background: var(--yellow);
+    margin: 0 0.5rem 0 0;
+    border-radius: 100px;
+}
+
+.chap_card .blue {
+    color: var(--dark-blue);
+    font-size: 16px;
+    font-family: "Cardo-Regular";
+    font-weight: bold;
+}
+
+.footer_chapter .footer_chapter_button {
+    border: none;
+    background-color: var(--yellow);
+    padding: 1rem 6rem;
+    font-family: 'Cardo-Bold';
+    font-size: 15px;
+    color: var(--dark-blue);
+    font-weight: bolder;
+    margin-top: var(--vert-padding);
+}
+
+.short_description {
+    margin-top: var(--vert-padding);
+}
+
+#chapter .link {
+    display: flex;
+    justify-content: center;
+    font-family: 'Inter-Regular';
+}
+
+#chapter .link a {
+    margin-right: 0.5rem;
+    color: var(--dark-blue);
+    border-bottom: 1px solid var(--dark-blue);
+}
