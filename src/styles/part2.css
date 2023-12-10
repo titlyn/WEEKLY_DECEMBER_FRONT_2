@@ -330,7 +330,7 @@
     gap: .6rem;
 }
 
-#about_book .card_book .group p{
+#about_book .card_book .group p {
     text-align: justify;
 }
 
@@ -404,9 +404,12 @@
 }
 
 #article {
+    flex-direction: column;
     text-align: center;
+    gap: 3.8rem;
+
     background: var(--blue-gray);
-    padding: var(--vert-padding);
+    padding: calc(var(--vert-padding)*2) calc(1.8rem + var(--horiz-padding));
 }
 
 #article p {
@@ -415,50 +418,60 @@
 
 #article .article_cards {
     display: flex;
-    margin-top: var(--vert-padding);
     justify-content: center;
-    padding: var(--vert-padding) var(--horiz-padding) var(--vert-padding) var(--horiz-padding);
+    gap: 2rem;
 }
 
-#article .article_cards .article_card {
-    margin: 1rem;
+.article_cards .article_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     width: 100%;
     background-color: var(--white);
 }
 
-#article .article_cards .article_card img {
+.article_cards .article_card img {
     width: 100%;
+    object-fit: cover;
 }
 
-#article .article_cards .article_card .desc {
-    padding: 1rem;
-    text-align: left;
+.article_cards .article_card .desc {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+
+    padding: 1.4rem 1.8rem;
+    text-align: justify;
 }
 
-#article .article_cards .article_card .desc h3 {
+.article_cards .article_card .desc h5 {
     font-family: 'Cardo-Regular';
     color: var(--dark-blue);
+    line-height: 125%;
+    letter-spacing: -0.03rem;
 }
 
-#article .article_cards .article_card .desc p {
+.article_cards .article_card .desc p {
     font-family: 'Inter-Regular';
     color: var(--gray);
-    margin-top: 1rem;
+    line-height: 180%;
+    letter-spacing: -0.01188rem;
 }
 
-#article .article_cards .article_card .desc .c_f {
+.article_cards .article_card .desc .c_f {
     display: flex;
     justify-content: space-between;
 }
 
-#article .article_cards .article_card .desc .c_f a {
+.article_cards .article_card .desc .c_f a {
     color: var(--dark-blue);
     border-bottom: 1px solid var(--dark-blue);
     font-family: 'Cardo-Regular';
     font-weight: bold;
 }
 
-#article .article_cards .article_card .desc .c_f .r_f {
+.article_cards .article_card .desc .c_f .r_f {
     font-family: 'Inter-Regular';
     color: var(--dark-blue);
 }
@@ -647,6 +660,24 @@ footer .white {
         min-width: 260px;
         width: 48%;
     }
+
+    #article .article_cards{
+        flex-direction: column;
+    }
+
+    .article_cards .article_card {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .article_cards .article_card img{
+        width: 40%;
+        object-fit: cover;
+    }
+
+    .article_cards .article_card .desc{
+        justify-content: center;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -659,33 +690,37 @@ footer .white {
         max-width: 550px;
     }
 
-    #about_book{
+    #about_book {
         flex-direction: column;
         gap: 2rem;
     }
 
-    #about_book .title{
+    #about_book .title {
         min-width: unset;
         text-align: center;
     }
 
-    #about_book .book_left, #about_book .book_right, #about_book .group, #about_book .group p{
+    #about_book .book_left,
+    #about_book .book_right,
+    #about_book .group,
+    #about_book .group p {
         width: 100%;
         align-items: center;
         text-align: center;
     }
 
-    #about_book .book_right{
+    #about_book .book_right {
         flex-direction: column;
     }
-    
-    #about_book .left_book_right, #about_book .right_book_right{
+
+    #about_book .left_book_right,
+    #about_book .right_book_right {
         flex-direction: row;
         flex-wrap: wrap;
         width: 100%;
     }
 
-    #about_book .card_book{
+    #about_book .card_book {
         width: 98%;
         max-width: 300px;
     }
@@ -705,7 +740,7 @@ footer .white {
     }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 496px) {
     .chap_card .foot {
         width: 100%;
         flex-direction: column;
@@ -717,5 +752,18 @@ footer .white {
 
     .chap_card .foot .nbr {
         margin: auto;
+    }
+
+    .article_cards .article_card {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .article_cards .article_card img{
+        width: 100%;
+    }
+
+    .article_cards .article_card .desc{
+        justify-content: center;
     }
 }
