@@ -144,13 +144,22 @@ nav #social-media-links a {
     justify-content: center;
     align-items: center;
 
-    border: .5px solid var(--yellow);
-    background-color: var(--yellow);
+    border: 1px solid var(--yellow);
+    /* background-color: var(--yellow); */
     color: var(--dark-blue);
 
     font-size: 1.05rem;
     font-weight: 700;
     letter-spacing: 0.02rem;
+    background: linear-gradient(to right, var(--yellow) 50%, var(--dark-blue) 50%);
+    background-size: 200% 100%;
+    cursor: pointer;
+    transition: background-position 0.5s;
+}
+
+#nav-order:hover {
+    background-position: -100% 0;
+    color: var(--white);
 }
 
 #menu-toggler {
@@ -253,10 +262,18 @@ nav #social-media-links a {
 }
 
 #details-btns .regular-btn {
-    background-color: var(--yellow);
-    border: 0.5px solid var(--yellow);
+    background: linear-gradient(to right, var(--yellow) 50%, var(--dark-blue) 50%);
+    background-size: 200% 100%;
+    cursor: pointer;
+    transition: background-position 0.5s;
+    border: 1px solid var(--yellow);
     color: var(--dark-blue);
     font-family: "Cardo-Regular";
+}
+
+#details-btns .regular-btn:hover {
+    background-position: -100% 0;
+    color: var(--white);
 }
 
 #details-btns a {
@@ -419,6 +436,10 @@ nav #social-media-links a {
 }
 
 .regular-btn.secondary {
+    background: linear-gradient(to right, var(--white) 50%, var(--yellow) 50%);
+    background-size: 200% 100%;
+    cursor: pointer;
+    transition: background-position 0.5s;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -426,6 +447,27 @@ nav #social-media-links a {
     font-weight: normal;
 }
 
+.regular-btn.secondary:hover {
+    background-position: -100% 0;
+}
+
+
+#callout .regular-btn.secondary {
+    background: linear-gradient(to right, var(--yellow) 50%, var(--dark-blue) 50%);
+    background-size: 200% 100%;
+    cursor: pointer;
+    transition: background-position 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--yellow);
+    font-weight: normal;
+}
+
+#callout .regular-btn.secondary:hover {
+    background-position: -100% 0;
+    color: var(--white);
+}
 /* -----ABOUT----- */
 #about {
     background-color: var(--blue-gray);
@@ -629,7 +671,7 @@ nav #social-media-links a {
 
 #callout-content .title,
 #callout-content .regular-btn.secondary {
-    color: var(--white);
+    color: var(--dark-blue);
 }
 
 #callout-content p {
