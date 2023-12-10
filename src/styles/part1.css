@@ -22,7 +22,7 @@ nav #social-media-links a,
 .trusted-details,
 #callout,
 #callout-content,
-#learn, #chapter, #chap-cards, .chap_card, .chap-card-content, #article {
+#learn, #chapter, #chap-cards, .chap_card, .chap-card-content, #article, #subscription {
     display: flex;
     align-items: center;
 }

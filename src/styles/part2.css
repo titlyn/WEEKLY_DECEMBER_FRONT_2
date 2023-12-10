@@ -477,56 +477,69 @@
 }
 
 #subscription {
-    padding: var(--horiz-padding);
+    flex-direction: column;
+    padding: calc(var(--vert-padding)*2.2) var(--horiz-padding);
     text-align: center;
 }
 
-#subscription .subscription_box {
+.subscription_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.8rem;
+
+    width: 100%;
+    padding: 7rem 14rem;
     background: var(--yellow);
-    padding: var(--horiz-padding);
 }
 
-#subscription .subscription_box .boite {
-    color: var(--dark-blue);
+.subscription_box .title::before {
+    border-bottom: 0.15rem solid var(--dark-blue);
 }
 
-#subscription .subscription_box .boite::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 15%;
-    border-bottom: 2px solid var(--dark-blue);
-}
-
-#subscription .subscription_box p {
+.subscription_box p {
     font-family: 'Inter-Regular';
-    margin-top: 1.5rem;
     color: var(--dark-blue);
+    line-height: 180%;
+    letter-spacing: -0.01188rem;
 }
 
 .sub_foot {
     display: flex;
     justify-content: center;
-    margin-top: 1.5rem;
+    width: 100%;
 }
 
 .sub_foot input {
     height: 3rem;
-    width: 50%;
+    width: 100%;
     border: none;
     padding: 1rem;
+}
+
+.sub_foot input::placeholder {
+    color: var(--gray);
+    font-family: "Inter";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%;
+    letter-spacing: -0.01063rem;
 }
 
 .sub_button {
     border: none;
     margin-left: 1rem;
-    width: 20%;
+    width: max-content;
     font-family: 'Cardo-Regular';
     font-weight: bold;
     background: var(--dark-blue);
     color: var(--white);
+    padding: 0 6.4375rem;
+
+    font-weight: 700;
+    line-height: 125%;
+    letter-spacing: 0.02375rem;
 }
 
 footer {
@@ -661,7 +674,7 @@ footer .white {
         width: 48%;
     }
 
-    #article .article_cards{
+    #article .article_cards {
         flex-direction: column;
     }
 
@@ -670,13 +683,37 @@ footer .white {
         width: 100%;
     }
 
-    .article_cards .article_card img{
+    .article_cards .article_card img {
         width: 40%;
         object-fit: cover;
     }
 
-    .article_cards .article_card .desc{
+    .article_cards .article_card .desc {
         justify-content: center;
+    }
+
+    .subscription_box{
+        padding: 7rem 4rem;
+    }
+
+    .subscription_box > *{
+        width: 100%;
+        max-width: 480px;
+    }
+
+    .sub_button {
+        border: none;
+        margin-left: 1rem;
+        width: max-content;
+        font-family: 'Cardo-Regular';
+        font-weight: bold;
+        background: var(--dark-blue);
+        color: var(--white);
+        padding: 0 2rem;
+    
+        font-weight: 700;
+        line-height: 125%;
+        letter-spacing: 0.02375rem;
     }
 }
 
@@ -759,11 +796,11 @@ footer .white {
         width: 100%;
     }
 
-    .article_cards .article_card img{
+    .article_cards .article_card img {
         width: 100%;
     }
 
-    .article_cards .article_card .desc{
+    .article_cards .article_card .desc {
         justify-content: center;
     }
 }
