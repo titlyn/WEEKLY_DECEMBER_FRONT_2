@@ -228,6 +228,8 @@ nav #cart-btn #cart-content-number {
     line-height: 180%;
     letter-spacing: -0.01188rem;
 
+    text-align: justify;
+
     width: 90%;
 }
 
@@ -378,6 +380,7 @@ nav #cart-btn #cart-content-number {
     line-height: 160%;
     /* 2.1375rem */
     letter-spacing: -0.01rem;
+    text-align: justify;
 }
 
 .book-details .details {
