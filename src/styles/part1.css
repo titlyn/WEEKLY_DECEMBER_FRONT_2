@@ -328,7 +328,7 @@ nav #cart-btn #cart-content-number {
 .title::before {
     content: "";
     position: absolute;
-    top: 120%;
+    bottom: -1rem;
     left: 50%;
     transform: translateX(-50%);
     width: 3.4rem;
@@ -424,7 +424,7 @@ nav #cart-btn #cart-content-number {
 }
 
 #about .title::before,
-#callout .title::before {
+#callout .title::before, #about_book .title::before{
     left: 0;
     transform: none;
     -webkit-transform: none;
@@ -925,7 +925,7 @@ nav #cart-btn #cart-content-number {
         flex-direction: column;
     }
 
-    #about .title::before, #callout .title::before {
+    #about .title::before, #callout .title::before, #about_book .title::before {
         left: 50%;
         transform: translate(-50%);
         -webkit-transform: translate(-50%);
