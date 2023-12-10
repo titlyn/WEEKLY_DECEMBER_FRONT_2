@@ -397,7 +397,7 @@ nav #cart-btn #cart-content-number {
 #about {
     background-color: var(--blue-gray);
     padding: calc(var(--vert-padding)*2) calc(1.8rem + var(--horiz-padding));
-    gap: 8.4rem;
+    gap: 7rem;
 }
 
 #about .title::before {
@@ -411,6 +411,7 @@ nav #cart-btn #cart-content-number {
 
 .yellowed-border {
     width: 70%;
+    max-width: 585px;
     height: 105%;
     border: 0.7rem solid var(--yellow);
 
@@ -420,15 +421,15 @@ nav #cart-btn #cart-content-number {
 .yellowed-border img {
     width: auto;
     max-width: 100%;
-    height: 98%;
+    height: 100%;
     object-fit: cover;
     margin: auto;
     box-shadow: 0rem 1.5rem 1.4rem #d0d0d0a8;
-    transform: translate(-1.6rem, -1.6rem);
-    -webkit-transform: translate(-1.6rem, -1.6rem);
-    -moz-transform: translate(-1.6rem, -1.6rem);
-    -ms-transform: translate(-1.6rem, -1.6rem);
-    -o-transform: translate(-1.6rem, -1.6rem);
+    transform: translate(-2rem, -2rem);
+    -webkit-transform: translate(-2rem, -2rem);
+    -moz-transform: translate(-2rem, -2rem);
+    -ms-transform: translate(-2rem, -2rem);
+    -o-transform: translate(-2rem, -2rem);
 }
 
 #about-content {
