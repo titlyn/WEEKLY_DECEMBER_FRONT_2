@@ -551,7 +551,7 @@ footer {
     text-align: center;
     background: var(--dark-blue);
     line-height: 2rem;
-    padding: calc(var(--vert-padding)*1.4) calc(1.8rem + var(--horiz-padding));
+    padding: calc(var(--vert-padding)*1.4) calc(1.8rem + var(--horiz-padding)) calc(var(--vert-padding)*1.1);
 }
 
 footer .top_footer {
