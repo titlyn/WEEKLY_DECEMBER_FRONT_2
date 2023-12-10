@@ -152,8 +152,9 @@ h6{
   color: var(--yellow);
 }
 
-h3{
-	letter-spacing: 1rem;
+#loader h3{
+	letter-spacing: 1.8rem;
+	text-align: center;
 	text-transform: uppercase;
 }
 
