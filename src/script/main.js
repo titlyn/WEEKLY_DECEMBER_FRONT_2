@@ -3,4 +3,4 @@ import { toggleMobilNav } from "./modules/nav.js";
 import { endLoader } from "./modules/loader.js";
 
 NAV_TOGGLER.addEventListener('click', toggleMobilNav)
-window.addEventListener('load' , () => endLoader())
+// window.addEventListener('load' , () => endLoader())
