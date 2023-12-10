@@ -957,6 +957,10 @@ nav #cart-btn #cart-content-number {
         gap: 2rem;
     }
 
+    #callout .content{
+        align-items: center;
+    }
+
     #callout-content{
         width: 100%;
     }
