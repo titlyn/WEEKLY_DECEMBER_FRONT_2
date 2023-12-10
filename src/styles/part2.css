@@ -541,7 +541,7 @@
     background: linear-gradient(to right, var(--dark-blue) 50%, var(--white) 50%);
     background-size: 200% 100%;
     cursor: pointer;
-    transition: background-position 0.5s;
+    transition: background-position 0.3s;
     margin-left: 1rem;
     width: max-content;
     font-family: 'Cardo-Regular';

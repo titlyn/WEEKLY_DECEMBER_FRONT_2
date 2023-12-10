@@ -78,10 +78,17 @@ nav #social-media-links {
 
 nav #social-media-links a {
     justify-content: center;
-
-    background-color: var(--white);
+    background: linear-gradient(to right, var(--white) 50%, var(--yellow) 50%);
+    background-size: 200% 100%;
+    cursor: pointer;
+    transition: background-position 0.3s;
+    /* background-color: var(--white); */
     width: 2.5rem;
     height: 2.5rem;
+}
+
+nav #social-media-links a:hover {
+    background-position: -100% 0;
 }
 
 #nav-content {
