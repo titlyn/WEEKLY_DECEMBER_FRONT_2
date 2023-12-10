@@ -32,6 +32,8 @@ header {
     background-color: var(--dark-blue);
     color: white;
 
+    font-family: "Inter-Regular";
+
     padding: 1.6rem var(--horiz-padding);
 
     justify-content: space-between;
@@ -102,7 +104,7 @@ nav #social-media-links a {
     gap: 0.4rem
 }
 
-nav #cart-btn {
+.cart-btn {
     border: none;
     background-color: transparent;
 
@@ -112,12 +114,12 @@ nav #cart-btn {
     position: relative;
 }
 
-nav #cart-btn img {
+.cart-btn img {
     width: 100%;
     height: 100%;
 }
 
-nav #cart-btn #cart-content-number {
+.cart-btn .cart-content-number {
     position: absolute;
     right: -.8rem;
     top: -.6rem;
@@ -200,6 +202,9 @@ nav #cart-btn #cart-content-number {
     display: flex;
     align-items: center;
 
+    font-family: "Cardo-Regular";
+    letter-spacing: -0.03rem;
+
     font-style: italic;
     font-weight: 400;
 
@@ -256,6 +261,7 @@ nav #cart-btn #cart-content-number {
 
 #details-btns a {
     font-size: 1.08rem;
+    font-family: "Cardo-Regular";
 
     text-decoration: underline;
     text-underline-offset: 0.4rem;
@@ -308,13 +314,17 @@ nav #cart-btn #cart-content-number {
 }
 
 .details .nbr {
-    color: var(--light-gray);
+    color: var(--light-grey);
     font-family: "Inter-Regular";
     font-size: 1rem;
     font-weight: 400;
     line-height: 170%;
     /* 1.9125rem */
     letter-spacing: 0.01rem;
+}
+
+.book-details .details .nbr, .chap_card .details .nbr{
+    color: var(--gray);
 }
 
 /* -----AUTHOR BOOKS----- */
@@ -786,7 +796,7 @@ nav #cart-btn #cart-content-number {
         padding: 0 var(--horiz-padding);
     }
 
-    nav #cart-btn {
+    nav .cart-btn {
         display: none;
     }
 

@@ -43,6 +43,9 @@
 }
 
 a {
+	display: inline-flex;
+	width: max-content;
+	height: max-content;
 	text-decoration: none;
 	color: inherit;
 }
@@ -77,26 +80,32 @@ button.regular-btn {
 
 h1{
 	font-size: 3.8rem;
+	font-family: "Cardo-Regular";
 }
 
 h2{
 	font-size: 3.4rem;
+	font-family: "Cardo-Regular";
 }
 
 h3{
 	font-size: 2.6rem;
+	font-family: "Cardo-Regular";
 }
 
 h4{
 	font-size: 1.8rem;
+	font-family: "Cardo-Regular";
 }
 
 h5{
 	font-size: 1.4rem;
+	font-family: "Cardo-Regular";
 }
 
 h6{
 	font-size: 1.25rem;
+	font-family: "Cardo-Regular";
 }
 /* #loader{
   z-index: 18;
