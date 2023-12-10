@@ -15,7 +15,7 @@ nav #social-media-links a,
 .book-details .details,
 #about,
 #about #counter,
-#author-details {
+#author-details, #trusted, #trusted-content, .trust-card, .trusted-details{
     display: flex;
     align-items: center;
 }
@@ -219,7 +219,7 @@ nav #cart-btn #cart-content-number {
     gap: 1.4rem;
 }
 
-.content p {
+.content p, .trusted-details p {
     color: var(--blue-gray);
     font-family: Inter;
     font-size: 1.1875rem;
@@ -529,6 +529,53 @@ nav #cart-btn #cart-content-number {
     line-height: 140%;
 }
 
+/* -----TRUSTED----- */
+#trusted{
+    flex-direction: column;
+    gap: 3.4rem;
+
+    padding: var(--vert-padding) var(--horiz-padding);
+}
+
+#trusted-content{
+    gap: 5rem;
+    justify-content: center;
+}
+
+#trusted-content .trust-card, .trusted-details{
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 1.6rem;
+}
+
+.trust-card .img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.trust-card .img-container img{
+    height: 100%;
+    width: auto;
+}
+
+.trusted-details{
+    gap: 0.4rem;
+}
+
+.trusted-details h5{
+    color: var(--dark-blue);
+}
+
+.trusted-details p{
+    color: var(--gray);
+    text-align: center;
+    font-size: 1rem;
+}
+
 @media only screen and (max-width: 1600px) {
     #banner-details {
         width: 50%;
@@ -688,11 +735,10 @@ nav #cart-btn #cart-content-number {
     nav.visible #nav-order,
     nav.visible #social-media-links a {
         /*opacity: 0;
-        */
-        animation: fade-in 0.5s cubic-bezier(0.19, 0.35, 0, 1) calc(.1s * var(--i)) 1 forwards;
-        -webkit-animation: fade-in .5s cubic-bezier(0.19, 0.35, 0, 1) calc(.1s * var(--i)) 1 forwards;
+        */animation: fade-in 0.25s cubic-bezier(0.19, 0.35, 0, 1) calc(.05s * var(--i)) 1 forwards;
+        -webkit-animation: fade-in 0.25s cubic-bezier(0.19, 0.35, 0, 1) calc(.05s * var(--i)) 1 forwards;
         animation-fill-mode: both;
-    }
+}
 
     #nav-order {
         width: 95%;
@@ -740,6 +786,16 @@ nav #cart-btn #cart-content-number {
     #about{
         padding: var(--vert-padding) calc(1.8rem + var(--horiz-padding));
     }   
+
+    #trusted-content{
+        flex-wrap: wrap;
+        gap: 2.5rem;
+    }
+
+    .trust-card{
+        width: 100%;
+        max-width: 200px;
+    }
 }
 
 @media only screen and (max-width: 768px) {
