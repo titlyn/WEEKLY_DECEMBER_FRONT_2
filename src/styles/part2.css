@@ -74,6 +74,9 @@
     padding: 2.2rem 2rem;
 
     text-align: justify;
+
+    overflow: hidden;
+    position: relative;
 }
 
 .card .rounded {
@@ -92,6 +95,40 @@
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    z-index: 2;
+}
+
+.card > *, .card .rounded span{
+    z-index: 2;
+}
+
+.card .rounded::before{
+    content: "";
+    z-index: 1;
+    background-color: var(--yellow);
+    position: absolute;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    width: 0%;
+    height: 0%;
+    transition: width 0.3s ease, height 0.3s ease, border-radius 0.3s ease;
+    -webkit-transition: width 0.3s ease, height 0.3s ease, border-radius 0.3s ease;
+    -moz-transition: width 0.3s ease, height 0.3s ease, border-radius 0.3s ease;
+    -ms-transition: width 0.3s ease, height 0.3s ease, border-radius 0.3s ease;
+    -o-transition: width 0.3s ease, height 0.3s ease, border-radius 0.3s ease;
+}
+
+.card:hover .rounded::before{
+    width: 100vw;
+    height: 100vw;
+    border-radius: 0%;
+    -webkit-border-radius: 0%;
+    -moz-border-radius: 0%;
+    -ms-border-radius: 0%;
+    -o-border-radius: 0%;
 }
 
 .card .text_description {
