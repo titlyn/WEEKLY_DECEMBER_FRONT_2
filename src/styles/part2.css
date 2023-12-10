@@ -58,6 +58,7 @@
 #learn .card {
     display: flex;
     flex-direction: column;
+    aspect-ratio: 1;
 
     /* flex: 1; */
 
@@ -70,7 +71,7 @@
     max-width: 285px;
     height: max-content;
 
-    padding: 2.4rem 2rem;
+    padding: 2.2rem 2rem;
 
     text-align: justify;
 }
@@ -98,7 +99,7 @@
     font-style: normal;
     line-height: 140%;
     letter-spacing: -0.015rem;
-    text-align: justify;
+    text-align: left;
 }
 
 #chapter {
@@ -610,6 +611,7 @@ footer .white {
     }
 
     #learn .card {
+        aspect-ratio: unset;
         max-width: unset;
         min-width: 260px;
         width: 48%;
