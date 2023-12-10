@@ -198,10 +198,19 @@
 }
 
 .footer_chapter .regular-btn {
+    background: linear-gradient(to right, var(--yellow) 50%, var(--white) 50%);
+    background-size: 200% 100%;
+    cursor: pointer;
+    transition: background-position 0.5s;
     width: 100%;
     min-width: max-content;
-    background-color: var(--yellow);
     border: 1px solid var(--yellow);
+    color: var(--dark-blue);
+}
+
+.footer_chapter .regular-btn:hover {
+    background-position: -100% 0;
+    color: var(--dark-blue);
 }
 
 .footer_chapter .short_description {
@@ -529,17 +538,26 @@
 
 .sub_button {
     border: none;
+    background: linear-gradient(to right, var(--dark-blue) 50%, var(--white) 50%);
+    background-size: 200% 100%;
+    cursor: pointer;
+    transition: background-position 0.5s;
     margin-left: 1rem;
     width: max-content;
     font-family: 'Cardo-Regular';
     font-weight: bold;
-    background: var(--dark-blue);
     color: var(--white);
     padding: 0 6.4375rem;
 
     font-weight: 700;
     line-height: 125%;
     letter-spacing: 0.02375rem;
+}
+
+.sub_button:hover {
+    background-position: -100% 0;
+    border: 1px solid var(--dark-blue);
+    color: var(--dark-blue);
 }
 
 footer {
