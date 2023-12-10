@@ -295,7 +295,6 @@ nav #social-media-links a {
 }
 
 #details-btns a {
-    margin: auto;
     font-size: 1.08rem;
     font-family: "Cardo-Regular";
 
@@ -688,7 +687,15 @@ nav #social-media-links a {
     gap: 1.8rem;
 }
 
-#callout-content .title,
+#callout-content .regular-btn.secondary {
+    color: var(--dark-blue);
+
+}
+
+#callout-content .title{
+    color: var(--white);
+}
+
 #callout-content .regular-btn.secondary {
     color: var(--dark-blue);
 }
