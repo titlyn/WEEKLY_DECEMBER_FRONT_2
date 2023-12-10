@@ -551,7 +551,7 @@ footer {
     text-align: center;
     background: var(--dark-blue);
     line-height: 2rem;
-    padding: calc(var(--vert-padding)*1.4) calc(1.8rem + var(--horiz-padding)) var(--vert-padding);
+    padding: calc(var(--vert-padding)*1.4) calc(1.8rem + var(--horiz-padding));
 }
 
 footer .top_footer {
@@ -615,6 +615,7 @@ footer .foot_card .social_title {
 footer .foot_card .social_title h2 {
     font-size: 1.5rem;
     font-weight: 700;
+    font-family: "Inter-Regular";
 }
 
 footer .foot_card .social_title img {
