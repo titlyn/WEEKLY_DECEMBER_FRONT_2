@@ -78,10 +78,17 @@ nav #social-media-links {
 
 nav #social-media-links a {
     justify-content: center;
-
-    background-color: var(--white);
+    background: linear-gradient(to right, var(--white) 50%, var(--yellow) 50%);
+    background-size: 200% 100%;
+    cursor: pointer;
+    transition: background-position 0.3s;
+    /* background-color: var(--white); */
     width: 2.5rem;
     height: 2.5rem;
+}
+
+nav #social-media-links a:hover {
+    background-position: -100% 0;
 }
 
 #nav-content {
@@ -100,9 +107,27 @@ nav #social-media-links a {
 #main-menu a {
     font-size: 1rem;
     padding: 0 0.5rem;
-
-    gap: 0.4rem
+    overflow: hidden;
+    gap: 0.4rem;
+    position:relative;
+    padding-bottom: 1rem;
 }
+
+#main-menu a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--yellow); 
+    transition: width 0.3s ease-in-out;
+}
+
+#main-menu a:hover::before {
+    width: 100%; 
+}
+
 
 .cart-btn {
     border: none;
@@ -154,7 +179,7 @@ nav #social-media-links a {
     background: linear-gradient(to right, var(--yellow) 50%, var(--dark-blue) 50%);
     background-size: 200% 100%;
     cursor: pointer;
-    transition: background-position 0.5s;
+    transition: background-position 0.3s;
 }
 
 #nav-order:hover {
@@ -265,7 +290,7 @@ nav #social-media-links a {
     background: linear-gradient(to right, var(--yellow) 50%, var(--dark-blue) 50%);
     background-size: 200% 100%;
     cursor: pointer;
-    transition: background-position 0.5s;
+    transition: background-position 0.3s;
     border: 1px solid var(--yellow);
     color: var(--dark-blue);
     font-family: "Cardo-Regular";
@@ -439,7 +464,7 @@ nav #social-media-links a {
     background: linear-gradient(to right, var(--white) 50%, var(--yellow) 50%);
     background-size: 200% 100%;
     cursor: pointer;
-    transition: background-position 0.5s;
+    transition: background-position 0.3s;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -456,7 +481,7 @@ nav #social-media-links a {
     background: linear-gradient(to right, var(--yellow) 50%, var(--dark-blue) 50%);
     background-size: 200% 100%;
     cursor: pointer;
-    transition: background-position 0.5s;
+    transition: background-position 0.3s;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -669,7 +694,15 @@ nav #social-media-links a {
     gap: 1.8rem;
 }
 
-#callout-content .title,
+#callout-content .regular-btn.secondary {
+    color: var(--dark-blue);
+
+}
+
+#callout-content .title{
+    color: var(--white);
+}
+
 #callout-content .regular-btn.secondary {
     color: var(--dark-blue);
 }
