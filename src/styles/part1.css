@@ -395,6 +395,7 @@ nav #cart-btn #cart-content-number {
 
 /* -----ABOUT----- */
 #about {
+    background-color: var(--blue-gray);
     padding: calc(var(--vert-padding)*2) calc(1.8rem + var(--horiz-padding));
     gap: 8.4rem;
 }
@@ -436,6 +437,10 @@ nav #cart-btn #cart-content-number {
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
+}
+
+#about-content .yellowed-border{
+    display: none;
 }
 
 #about .content p {
@@ -731,10 +736,6 @@ nav #cart-btn #cart-content-number {
     #about{
         padding: var(--vert-padding) calc(1.8rem + var(--horiz-padding));
     }   
-    
-    #about-content .yellowed-border{
-        display: none;
-    }
 }
 
 @media only screen and (max-width: 768px) {
