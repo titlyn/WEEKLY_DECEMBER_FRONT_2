@@ -1161,3 +1161,16 @@ nav #social-media-links a:hover {
         -o-transform: translateX(0);
     }
 }
+
+#banner-details.invisible{
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    -webkit-transition: opacity .3s ease-in-out;
+    -moz-transition: opacity .3s ease-in-out;
+    -ms-transition: opacity .3s ease-in-out;
+    -o-transition: opacity .3s ease-in-out;
+}
+
+#banner-img.invisible{
+
+}
