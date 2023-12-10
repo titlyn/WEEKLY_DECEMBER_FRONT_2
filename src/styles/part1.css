@@ -295,6 +295,7 @@ nav #social-media-links a {
 }
 
 #details-btns a {
+    margin: auto;
     font-size: 1.08rem;
     font-family: "Cardo-Regular";
 
