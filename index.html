@@ -75,7 +75,7 @@
 
 
         <div id="landing" class="full-page">
-            <div id="banner-details">
+            <div id="banner-details" class="invisible" scroll-spy="permanent">
                 <h5 id="welcome-msg">
                     <span class="horiz-line"></span>
                     Welcome to Pages
@@ -111,7 +111,7 @@
                     </div>
                 </div>
             </div>
-            <div id="banner-img">
+            <div id="banner-img" class="invisible" scroll-spy="permanent">
                 <svg width="592" height="800" viewBox="0 0 592 800" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="6" y="6" width="580" height="788" fill="white" stroke="#DBE1E9" stroke-width="12" />
                     <path d="M11 10H580V790H11V10Z" fill="#F9FBFF" />
@@ -352,7 +352,7 @@
                 <div class="left_container">
                     <div class="card">
                         <div class="rounded">
-                            01
+                            <span>01</span>
                         </div>
                         <p class="text_description">
                             Use HDFS & MAP Reduce for storing & analyzing data at scale.
@@ -361,7 +361,7 @@
 
                     <div class="card">
                         <div class="rounded">
-                            02
+                            <span>02</span>
                         </div>
                         <p class="text_description">
                             Consume streaming data using Spark Streaming, Flink, and Storm.
@@ -370,7 +370,7 @@
 
                     <div class="card">
                         <div class="rounded">
-                            03
+                            <span>03</span>
                         </div>
                         <p class="text_description">
                             Choose an appropriate data storage technology for your application
@@ -379,7 +379,7 @@
 
                     <div class="card">
                         <div class="rounded">
-                            04
+                            <span>04</span>
                         </div>
                         <p class="text_description">
                             Analyze non- relational data using HBase, Cassandra, and MongoDB.
