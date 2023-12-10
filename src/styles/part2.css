@@ -102,10 +102,12 @@
 }
 
 #chapter {
+    flex-direction: column;
+    gap: 3.8rem;
+
     text-align: center;
     background-color: var(--blue-gray);
-    margin-top: var(--vert-padding);
-    padding: var(--horiz-padding) var(--horiz-padding) var(--horiz-padding) var(--horiz-padding);
+    padding: calc(var(--vert-padding)*2.2) var(--horiz-padding);
 }
 
 #chapter p {
@@ -113,61 +115,67 @@
     color: var(--gray);
 }
 
-#chapter .boite {
-    color: var(--dark-blue);
-    font-family: "Cardo-Regular";
-}
-
 #chapter .chapter_container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: var(--vert-padding);
+
+    gap: 4.6rem;
 }
 
-#chapter .chapter_container .top_chapter_card {
-    display: flex;
-}
-
-#chapter .chapter_container .bottom_chapter_card {
-    display: flex;
+#chap-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
 }
 
 .chap_card {
-    margin: var(--vert-padding);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.4rem;
+
+    width: calc(50% - 2.5rem);
     text-align: left;
     background-color: var(--white);
-    padding: var(--vert-padding);
+
+    padding: 2.6rem 3rem;
+}
+
+.chap-card-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
 }
 
 .title_card {
     font-family: 'Cardo-Regular';
     color: var(--dark-blue);
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -0.03rem;
 }
 
-.chap_card .desc_card {
-    margin-top: 1rem;
+.desc_card {
+    font-weight: 400;
+    line-height: 180%;
+    letter-spacing: -0.01188rem;
+}
+
+.chap_card .details p {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.chap_card .details .nbr {
+    line-height: normal;
+    font-size: 1.2rem;
 }
 
 .chap_card .foot {
-    margin-top: 1rem;
     display: flex;
-    justify-content: space-between;
-}
-
-.chap_card .foot .left_foot,
-.right_foot {
-    display: flex;
-    align-items: center;
-}
-
-.foot .round {
-    height: 10px;
-    width: 10px;
-    background: var(--yellow);
-    margin: 0 0.5rem 0 0;
-    border-radius: 100px;
+    gap: 1rem;
 }
 
 .chap_card .blue {
@@ -177,31 +185,35 @@
     font-weight: bold;
 }
 
-.footer_chapter .footer_chapter_button {
-    border: none;
-    background-color: var(--yellow);
-    padding: 1rem 6rem;
-    font-family: 'Cardo-Bold';
-    font-size: 15px;
-    color: var(--dark-blue);
-    font-weight: bolder;
-    margin-top: var(--vert-padding);
-}
-
-.short_description {
-    margin-top: var(--vert-padding);
-}
-
-#chapter .link {
+.footer_chapter {
     display: flex;
-    justify-content: center;
-    font-family: 'Inter-Regular';
+    flex-direction: column;
+    align-items: center;
+
+    width: 35%;
+    max-width: 485px;
+
+    gap: 2rem;
 }
 
-#chapter .link a {
+.footer_chapter .regular-btn {
+    width: 100%;
+    min-width: max-content;
+    background-color: var(--yellow);
+    border: 1px solid var(--yellow);
+}
+
+.footer_chapter .short_description {
+    font-family: 'Inter-Regular';
     margin-right: 0.5rem;
     color: var(--dark-blue);
-    border-bottom: 1px solid var(--dark-blue);
+    font-weight: 400;
+    line-height: 170%   
+}
+
+.footer_chapter .short_description a {
+    color: var(--dark-blue);
+    text-decoration: underline;
 }
 
 #about_book {
@@ -580,17 +592,23 @@ footer .white {
     #learn .card {
         max-width: 320px;
     }
+
+    .footer_chapter {
+        width: 50%;
+        max-width: 485px;
+        min-width: max-content;
+    }
 }
 
 @media only screen and (max-width: 992px) {
-    .learn_container{
+    .learn_container {
         flex-direction: column;
     }
-    
-    #learn .left_container{
+
+    #learn .left_container {
         width: 100%;
     }
-    
+
     #learn .card {
         max-width: unset;
         min-width: 260px;
@@ -598,9 +616,37 @@ footer .white {
     }
 }
 
+@media only screen and (max-width: 768px) {
+    #chap-cards {
+        flex-direction: column;
+    }
+
+    .chap_card {
+        width: 100%;
+        max-width: 550px;
+    }
+}
+
 @media only screen and (max-width: 680px) {
-    #learn .card, #learn .img-container {
+
+    #learn .card,
+    #learn .img-container {
         width: 100%;
         max-width: 350px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .chap_card .foot {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .chap_card .foot p {
+        width: 100%;
+    }
+
+    .chap_card .foot .nbr {
+        margin: auto;
     }
 }

@@ -22,7 +22,7 @@ nav #social-media-links a,
 .trusted-details,
 #callout,
 #callout-content,
-#learn {
+#learn, #chapter, #chap-cards, .chap_card, .chap-card-content {
     display: flex;
     align-items: center;
 }
@@ -251,6 +251,7 @@ nav #cart-btn #cart-content-number {
     background-color: var(--yellow);
     border: 0.5px solid var(--yellow);
     color: var(--dark-blue);
+    font-family: "Cardo-Regular";
 }
 
 #details-btns a {
@@ -284,7 +285,7 @@ nav #cart-btn #cart-content-number {
 .details p::before {
     content: "";
     position: absolute;
-    top: .38rem;
+    top: .5rem;
     left: 0;
     width: 1rem;
     height: 1rem;
@@ -296,9 +297,19 @@ nav #cart-btn #cart-content-number {
     -o-border-radius: 50%;
 }
 
+#landing .details .mini-title{
+    color: var(--white);
+    letter-spacing: -0.015rem;
+}
+
+.details .mini-title{
+    color: var(--dark-blue);
+    font-family: "Cardo-Regular";
+}
+
 .details .nbr {
     color: var(--light-gray);
-    font-family: Inter;
+    font-family: "Inter-Regular";
     font-size: 1rem;
     font-weight: 400;
     line-height: 170%;
@@ -329,7 +340,7 @@ nav #cart-btn #cart-content-number {
 }
 
 #author-books {
-    padding: calc(var(--vert-padding)*2) var(--horiz-padding);
+    padding: calc(var(--vert-padding)*2.2) var(--horiz-padding);
 }
 
 #author-books {
@@ -408,7 +419,7 @@ nav #cart-btn #cart-content-number {
 /* -----ABOUT----- */
 #about {
     background-color: var(--blue-gray);
-    padding: calc(var(--vert-padding)*2) calc(1.8rem + var(--horiz-padding));
+    padding: calc(var(--vert-padding)*2.2) calc(1.8rem + var(--horiz-padding));
     gap: 7rem;
 }
 
