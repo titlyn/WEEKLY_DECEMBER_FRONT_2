@@ -297,3 +297,33 @@ h6{
 	50%  { left: -10vw }
 	100%  { left: 100vw }
 }
+
+@keyframes pipika {
+	0%{
+		filter: opacity(0%);
+		-webkit-filter: opacity(0%);
+	}
+	5%{
+		filter: opacity(60%);
+		-webkit-filter: opacity(60%);
+	}
+	8%{
+		filter: opacity(0%);
+		-webkit-filter: opacity(0%);
+	}
+	12%{
+		filter: opacity(100%);
+		-webkit-filter: opacity(100%);
+}
+	100%{
+		filter: opacity(100%);
+		-webkit-filter: opacity(100%);
+}
+}
+
+#reflextion, #lamp{
+	animation: pipika 3s ease-in-out 0s infinite forwards;
+	-webkit-animation: pipika 3s ease-in-out 0s infinite forwards;
+	animation-play-state: running;
+	animation-fill-mode: forwards;
+}
